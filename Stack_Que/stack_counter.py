@@ -4,13 +4,13 @@ def precedence(op):
     elif op == '*' or op == '/':
         return 2
     else:
-        return 0  # 괄호 같은 경우
+        return 0  
 
 def infix_to_postfix(expression):
-    opstack = []      # 연산자 저장 스택
-    outstack = []     # 출력 저장 리스트
+    opstack = []       
+    outstack = []     
 
-    tokens = list(expression.replace(" ", ""))  # 공백 제거 후 문자 하나씩 처리
+    tokens = list(expression.replace(" ", ""))  
 
     for token in tokens:
         if token.isnumeric():
